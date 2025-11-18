@@ -1,0 +1,51 @@
+[EASY]
+
+Q: What is the time complexity of linear search?
+A: O(n), linear time, On
+
+Q: What is the time complexity of binary search?
+A: O(log n), logarithmic, Ologn
+
+Q: When can you use binary search on an array?
+A: Array must be sorted, sorted array only
+
+Q: What is the worst case for linear search?
+A: Element is at the end or not present, need to check all elements
+
+Q: In binary search, which data structure maintains the search range?
+A: Start and end pointers, left and right indices, low and high bounds
+
+[MEDIUM]
+
+Q: Explain the binary search algorithm and how it reduces search space.
+A: Compare with middle element, discard half of array, continue with remaining half
+
+Q: What is the time complexity of binary search on a linked list?
+A: O(n), linear time, On, cannot access middle element
+
+Q: Design an algorithm to find an element in a sorted array with unknown length.
+A: Use exponential search to find bounds, then binary search within bounds
+
+Q: How would you find the first occurrence of an element in a sorted array with duplicates?
+A: Binary search to find element, then search left until different element found
+
+Q: What is the difference between bisect_left and bisect_right operations?
+A: bisect_left finds leftmost position, bisect_right finds rightmost position for insertion
+
+[HARD]
+
+Q: Design a search algorithm for a rotated sorted array. What's the time complexity?
+A: Identify sorted half using binary search, search that half, O(log n) time
+
+Q: Implement a search algorithm for a 2D sorted matrix where rows and columns are sorted.
+A: Start from top-right or bottom-left corner, eliminate row or column based on comparison, O(m+n) time
+
+Q: Design search in a sorted array with unknown rotation point.
+A: Find rotation point first using binary search, then search in appropriate half
+
+Q: Implement interpolation search for uniformly distributed data. When is it better than binary?
+A: Calculates position based on value distribution, O(log log n) average for uniform data, O(n) worst case
+
+Q: Design a search algorithm for finding k-th smallest element in sorted 2D matrix.
+A: Binary search on answer space from min to max, count elements less than mid value
+

@@ -1,0 +1,43 @@
+Arrays
+
+Definition:
+An array is a contiguous block of memory holding elements of the same type, accessible by index.
+
+Key operations:
+- Access by index: O(1)
+- Traversal: O(n)
+- Insertion/deletion at arbitrary position: O(n)
+
+Related algorithms:
+- Linear search: scan elements, O(n)
+- Binary search: on sorted arrays, O(log n)
+
+Example: Binary Search Pseudocode
+(see intro topic for binary search pseudocode)
+
+Tips:
+- Use arrays for random access when size is known or resizing is rare.
+- Use vector (C++) when dynamic resizing required.
+
+FAQ:
+Q: What is the difference between an array and a linked list?
+A: Arrays use contiguous memory and allow O(1) random access by index; linked lists use nodes and pointers allowing O(1) insert/delete at known positions but O(n) access.
+
+Q: When should I use an array?
+A: Use arrays when you need fast indexed access and size is fixed or resizing is rare; use dynamic arrays (vector) when resizing is needed.
+
+Pseudocode: Binary Search (iterative)
+function binarySearch(arr, key):
+	low = 0; high = n-1
+	while low <= high:
+		mid = (low + high) // 2
+		if arr[mid] == key: return mid
+		if arr[mid] < key: low = mid + 1
+		else: high = mid - 1
+	return -1
+Example:
+arr = [1,3,5,7,9]
+binarySearch(arr,7) -> index 3
+
+
+Want a quiz? Type 'quiz array'.

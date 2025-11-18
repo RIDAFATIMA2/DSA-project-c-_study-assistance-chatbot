@@ -1,0 +1,47 @@
+Binary Heap, Heap Sort, Priority Queue
+
+Definition:
+Binary Heap:A heap is a binary tree where the parent's value is always bigger or smaller than its children.
+- A complete binary tree represented as array
+- Min-heap: parent <= children; Max-heap: parent >= children
+- Operations: insert O(log n), extract-min/max O(log n)
+
+Heap Sort:
+- Build heap (O(n)), then repeatedly extract to get sorted order: O(n log n)
+- Not stable, can be in-place
+
+Priority Queue:
+- Abstract data type supporting insert and extract-min/max
+- Implemented efficiently using binary heap
+
+
+FAQ:
+Q: Binary heap vs BST for priority queue?
+A: Binary heap gives O(1) access to top priority and O(log n) insert/extract; BSTs can give ordered traversal but are less efficient for priority queue operations.
+
+Q: Is heap sort stable?
+A: No, heap sort is not stable by default.
+
+Pseudocode:
+HEAPSORT(A):
+    n :length(A)
+    BUILD-MAX-HEAP(A)
+    for i ← n downto 2:
+        swap A[1] and A[i]
+        heap_size ← heap_size - 1
+        MAX-HEAPIFY(A, 1)
+Heapify (sift-down) for index i in array-backed heap
+function heapify(arr, n, i):
+	largest = i
+	l = 2*i + 1; r = 2*i + 2
+	if l < n and arr[l] > arr[largest]: largest = l
+	if r < n and arr[r] > arr[largest]: largest = r
+	if largest != i:
+		swap(arr[i], arr[largest])
+		heapify(arr, n, largest)
+Pseudocode: Build-heap
+for i = n/2 - 1 downto 0: heapify(arr, n, i)
+
+Example: Use heap to implement priority queue where top is max/min element.
+
+Type 'quiz binary_heap' for questions.

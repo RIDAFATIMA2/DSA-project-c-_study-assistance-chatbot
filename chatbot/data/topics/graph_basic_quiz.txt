@@ -1,0 +1,50 @@
+[EASY]
+
+Q: What are the main components of a graph?
+A: Vertices and edges, nodes and connections, vertices connected by edges
+
+Q: What is the difference between a directed and undirected graph?
+A: Directed has one-way edges, undirected has two-way edges, direction matters
+
+Q: What is the time complexity of BFS on a graph with V vertices and E edges?
+A: O(V + E), linear in vertices and edges, OVE
+
+Q: What is the time complexity of DFS on a graph?
+A: O(V + E), linear in vertices and edges, OVE
+
+Q: Name the main difference between BFS and DFS traversal.
+A: BFS uses queue for level-order, DFS uses stack for depth-first, BFS explores breadth first
+
+[MEDIUM]
+
+Q: Explain the Breadth-First Search (BFS) algorithm for graphs.
+A: Start from source, visit neighbors level by level using queue, explores all neighbors before going deeper
+
+Q: Explain the Depth-First Search (DFS) algorithm for graphs.
+A: Start from source, explore as far as possible along path using stack or recursion, backtracks when stuck
+
+Q: How do you represent a graph using an adjacency list?
+A: Array of lists where each index is vertex and list contains adjacent vertices, sparse graph representation
+
+Q: What is the difference between adjacency list and adjacency matrix representations?
+A: List is O(V+E) space for sparse, matrix is O(V^2) space but O(1) edge lookup
+
+Q: How would you detect if a graph is connected?
+A: Run BFS or DFS from any vertex, if all vertices visited then connected, use traversal count
+
+[HARD]
+
+Q: Implement cycle detection in an undirected graph using DFS. What's the algorithm?
+A: Track visited nodes and parent, if neighbor visited and not parent then cycle exists
+
+Q: Design an algorithm to find all connected components in an undirected graph.
+A: Run DFS or BFS from each unvisited vertex, each traversal finds one connected component
+
+Q: Explain topological sorting for directed acyclic graphs (DAGs).
+A: Order vertices such that for every edge u->v, u comes before v, use DFS with finish times
+
+Q: How would you find strongly connected components in a directed graph?
+A: Use Kosaraju or Tarjan algorithm, find SCCs with DFS and transpose graph operations
+
+Q: Design bipartite graph detection algorithm. What's the time complexity?
+A: Color graph with two colors using BFS/DFS, if coloring succeeds graph is bipartite, O(V+E) time

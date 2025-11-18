@@ -1,0 +1,46 @@
+AVL Tree — Balanced Binary Search Tree
+
+Definition:
+An AVL tree is a self-balancing binary search tree where the heights of two child subtrees of any node differ by at most one.
+
+Operations:
+- Insertion and deletion may require rotations to maintain balance.
+- Search remains O(log n) due to balance.
+
+Rotations:
+- Single rotation (left or right)
+- Double rotation (left-right or right-left)
+
+Use-cases:
+- When strict height balance is required for guaranteed log(n) operations.
+
+FAQ:
+Q: AVL vs Red-Black Tree?
+A: AVL trees are more strictly balanced (smaller height) and often faster for lookups; Red-Black trees allow faster insertion/deletion in practice due to fewer rotations and are used in many libraries.
+
+Q: When to use AVL?
+A: Use AVL when reads/searches are frequent and strict balance is desired; for many real-world maps/sets, red-black trees are preferred for balanced performance.
+
+Pseudocode: Right Rotation (single)
+function rotateRight(y):
+	x = y.left
+	T2 = x.right
+	x.right = y
+	y.left = T2
+	// update heights if tracked
+	return x // new root
+Pseudocode: Left Rotation (single)
+function rotateLeft(x):
+	y = x.right
+	T2 = y.left
+	y.left = x
+	x.right = T2
+	// update heights if tracked
+	return y // new root
+
+Example:
+Insert sequence: 30, 20, 40, 10, 25, 35, 50 — after insertions, tree remains balanced via rotations as needed.
+
+FAQ:
+Q: How does AVL keep balance?
+A: By tracking subtree heights and performing single/double rotations when balance factor goes outside [-1,1].

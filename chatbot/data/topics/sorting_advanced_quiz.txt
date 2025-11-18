@@ -1,0 +1,50 @@
+[EASY]
+
+Q: What is the time complexity of Quicksort on average?
+A: O(n log n), nlogn, Onlogn
+
+Q: What is the time complexity of Mergesort?
+A: O(n log n), nlogn, Onlogn, guaranteed
+
+Q: What is the main difference between Quicksort and Mergesort?
+A: Quicksort in-place divide and conquer, mergesort requires extra space, quicksort unstable
+
+Q: Why is Quicksort called quick?
+A: Average case O(n log n) with low constants, fast in practice, efficient partitioning
+
+Q: What is the pivot in Quicksort?
+A: Element used to partition array, divides into smaller and larger elements
+
+[MEDIUM]
+
+Q: Explain the partitioning process in Quicksort.
+A: Select pivot, place elements smaller to left, larger to right, pivot in correct position
+
+Q: What are different strategies for selecting a pivot in Quicksort?
+A: First element, last element, random element, median-of-three, median of medians
+
+Q: Describe the merge operation in Mergesort.
+A: Combine two sorted subarrays into one sorted array by comparing elements from each
+
+Q: Why does Mergesort require O(n) extra space?
+A: Needs temporary array to merge sorted subarrays, cannot merge in-place efficiently
+
+Q: What pivot selection strategy reduces worst-case O(n^2) in Quicksort?
+A: Random pivot, median-of-three, median of medians for O(n log n) guarantee
+
+[HARD]
+
+Q: Design a 3-way partition Quicksort for arrays with many duplicates. What's the improvement?
+A: Partition into less than, equal to, and greater than pivot, handles duplicates efficiently
+
+Q: Implement Quicksort with introspective sort. When and why switch to heapsort?
+A: Start with quicksort, switch to heapsort if recursion depth exceeds 2*log(n), ensures O(n log n) worst case
+
+Q: Design a hybrid sorting algorithm combining Quicksort, Mergesort, and Insertion Sort.
+A: Use quicksort initially, switch to insertion sort for small arrays, mergesort for stability when needed
+
+Q: Analyze the problem of selecting random pivot in Quicksort and optimal selection.
+A: Random pivot has worst case O(n^2) probability, median-of-medians guarantees O(n log n) but higher constants
+
+Q: Implement external merge sort for data larger than memory. Describe the algorithm.
+A: Divide data into chunks that fit in memory, sort each chunk, merge sorted chunks from disk files

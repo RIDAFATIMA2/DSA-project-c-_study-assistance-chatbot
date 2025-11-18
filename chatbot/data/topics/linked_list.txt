@@ -1,0 +1,53 @@
+Linked List (Singly)
+
+Definition:
+A linked list is a linear collection of nodes where each node contains data and a pointer to the next node.
+
+Operations:
+- Insertion at head: O(1)
+- Deletion when node known: O(1)
+- Search by value: O(n)
+
+Pseudocode: Insert at head
+function insertHead(head, value):
+    node = new Node(value)
+    node.next = head
+    head = node
+    return head
+Pseudocode: Delete by value
+function deleteValue(head, value):
+    prev = null; cur = head
+    while cur != null and cur.value != value:
+        prev = cur; cur = cur.next
+    if cur == null: return head
+    if prev == null: head = head.next
+    else: prev.next = cur.next
+    delete cur
+    return head
+Pseudocode: Reverse a singly linked list (iterative)
+function reverse(head):
+    prev = null
+    cur = head
+    while cur != null:
+        next = cur.next
+        cur.next = prev
+        prev = cur
+        cur = next
+    return prev // new head
+
+Example: Insert at head and reverse to get last-in-first-out order.
+
+Tips:
+- Linked lists are flexible for insertion/deletion when position is known.
+- Random access is O(n), so not good for indexing.
+
+
+FAQ:
+Q: Array vs Linked List?
+A: Arrays offer O(1) index access and contiguous storage; linked lists offer O(1) insertion/deletion at known positions and flexible size but O(n) access by index.
+
+Q: When to use a linked list?
+A: Use linked lists when frequent insertions/deletions in the middle are needed and random access is not required.
+
+
+Want a quiz? Type 'quiz linked_list'.

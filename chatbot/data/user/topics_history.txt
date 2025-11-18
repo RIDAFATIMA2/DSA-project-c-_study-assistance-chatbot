@@ -1,0 +1,4 @@
+# Topics history file
+# Format: username|sessions:topic1,topic2,...
+
+rida|sessions:array,avl_tree,graph_basic,linked_list,doubly_circular_linked_list

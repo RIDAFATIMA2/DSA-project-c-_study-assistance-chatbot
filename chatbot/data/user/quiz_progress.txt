@@ -1,0 +1,4 @@
+# Quiz progress file
+# Format: username|topic:score/total:difficulty
+
+rida|bst:1/5:EASY

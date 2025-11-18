@@ -1,0 +1,37 @@
+Doubly & Circular Linked Lists
+
+Definition:
+Doubly Linked List: Each node has pointers to both next and previous nodes. Supports insertion/deletion at both ends more easily.
+
+Circular Linked List:
+- Tail points back to head, forming a circle.
+- Useful for round-robin or circular buffers.
+
+Operations:
+- Insert at position: O(1) if node known, otherwise O(n) to find position.
+- Deletion similar.
+
+Example: Use doubly list for browser history back/forward.
+
+
+FAQ:
+Q: When to use doubly linked list over singly?
+A: Use doubly linked lists when you need efficient backward traversal or easy deletion given a node reference without tracking previous pointer externally.
+
+Q: Use cases for circular lists?
+A: Circular lists are handy for round-robin scheduling, implementing cyclic buffers, or representing circular structures where wrap-around is natural.
+
+Pseudocode: Insert after node (doubly)
+function insertAfter(node, value):
+	newNode = new Node(value)
+	newNode.next = node.next
+	newNode.prev = node
+	node.next.prev = newNode
+	node.next = newNode
+Pseudocode: Delete node (doubly)
+function deleteNode(node):
+	node.prev.next = node.next
+	node.next.prev = node.prev
+	delete node
+
+Want a quiz? Type 'quiz doubly_circular_linked_list'.

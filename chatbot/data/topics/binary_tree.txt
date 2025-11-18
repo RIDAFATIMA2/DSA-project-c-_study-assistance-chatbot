@@ -1,0 +1,50 @@
+Binary Tree : Properties and Types
+
+Definition:
+A binary tree is a tree data structure where each node has at most two children: left and right.
+
+Types:
+- Full binary tree: every node has 0 or 2 children
+- Complete binary tree: all levels filled except possibly last, filled left to right
+- Perfect binary tree: all internal nodes have two children and all leaves are at same depth
+
+Traversals:
+- Preorder (root, left, right)
+- Inorder (left, root, right)
+- Postorder (left, right, root)
+
+Pseudocode: Preorder recursive
+function preorder(node):
+    if node == null: return
+    visit(node)
+    preorder(node.left)
+    preorder(node.right)
+Pseudocode: Inorder recursive
+function inorder(node):
+    if node == null: return
+    inorder(node.left)
+    visit(node)
+    inorder(node.right)
+Pseudocode: Postorder recursive
+function postorder(node):
+    if node == null: return
+    postorder(node.left)
+    postorder(node.right)
+    visit(node)
+
+
+Example:
+Consider tree with root 1, left child 2, right child 3; Preorder traversal: 1 2 3; Inorder: 2 1 3; Postorder: 2 3 1
+
+Applications:
+- Expression trees, binary heaps (specialized), binary search trees
+
+
+FAQ:
+Q: What is the difference between a binary tree and a binary search tree (BST)?
+A: A BST is a binary tree with the ordering property (left < node < right). A general binary tree need not obey this.
+
+Q: What is preorder traversal pseudocode?
+A: Preorder: visit node, traverse left subtree, traverse right subtree. (See Pseudocode section above.)
+
+Type 'quiz binary_tree' for a quiz.

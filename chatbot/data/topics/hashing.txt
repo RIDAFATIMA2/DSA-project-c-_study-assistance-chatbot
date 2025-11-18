@@ -1,0 +1,46 @@
+Hashing : Hash Functions and Collision Resolution
+
+Definition:
+Hash Table:A hash table is a data structure that stores key value pairs and uses a hash function to quickly map keys to their associated values for fast lookup, insertion, and deletion.
+- Average access: O(1), worst case O(n) depending on collision handling.
+
+Hash functions:
+- Map keys to bucket indices; good hash functions minimize collisions.
+
+Collision resolution techniques:
+- Chaining: store elements in buckets as linked lists
+- Open addressing: linear probing, quadratic probing, double hashing
+
+Rehashing:
+- When load factor grows, resize table and rebuild to maintain performance
+
+
+FAQ:
+Q: What is a good collision resolution technique for simple implementations?
+A: Chaining is simple and robust; open addressing is memory-efficient but needs careful probing and resizing.
+
+Q: When to rehash?
+A: Rehash (resize) when load factor (n / bucket_count) passes a threshold (commonly 0.7) to keep average O(1) operations.
+
+Example:
+Use a hash table with chaining to store (username -> userinfo) pairs, rehash when load factor grows.
+
+Pseudocode: Insert into hash table (chaining)
+function insert(table, key, value):
+	idx = hash(key) % table.size
+	append (key,value) to table[idx]
+Pseudocode: Simple rehash
+function rehash(table):
+	newSize = nextPrime(table.size * 2)
+	newTable = vector<list> of size newSize
+	for bucket in table:
+		for (k,v) in bucket: insert(newTable, k, v)
+	table = newTable
+Pseudocode: Lookup (chaining)
+function lookup(table, key):
+	idx = hash(key) % table.size
+	for (k,v) in table[idx]:
+		if k == key: return v
+	return NOT_FOUND
+
+Type 'quiz hashing' for a quiz.

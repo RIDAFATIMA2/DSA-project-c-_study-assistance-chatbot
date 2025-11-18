@@ -1,0 +1,50 @@
+[EASY]
+
+Q: What is a data structure?
+A: Way to organize and store data, collection of data with operations, format for data organization
+
+Q: What are the main categories of data structures?
+A: Linear and nonlinear, arrays lists stacks queues trees graphs, sequential and hierarchical
+
+Q: What is the difference between an array and a linked list?
+A: Array has fixed size and random access, linked list dynamic and sequential access
+
+Q: What is the primary purpose of a stack?
+A: LIFO operations, last in first out, temporary data storage
+
+Q: What is the primary purpose of a queue?
+A: FIFO operations, first in first out, sequential processing
+
+[MEDIUM]
+
+Q: Explain time complexity and space complexity in data structures.
+A: Time measures operations needed, space measures memory used, both analyzed using Big-O notation
+
+Q: When would you choose a linked list over an array?
+A: Frequent insertions/deletions, unknown size ahead, don't need random access
+
+Q: When would you choose an array over a linked list?
+A: Need fast random access, memory efficiency, cache locality, fixed size known
+
+Q: What is the difference between a tree and a graph?
+A: Tree is acyclic connected graph, graph can have cycles, tree is special case of graph
+
+Q: Explain the trade-offs between different data structures in terms of operations.
+A: Different structures optimize different operations, array fast access but slow insertion, list fast insertion slow access
+
+[HARD]
+
+Q: Design a composite data structure combining array, hash map, and doubly linked list.
+A: LRU Cache design, use all three for O(1) operations, array for storage, map for access, list for ordering
+
+Q: Analyze when to use each data structure: array, linked list, tree, graph, hash table.
+A: Array for indexed access, list for insertions, tree for hierarchical data, graph for relationships, hash for lookups
+
+Q: Given a problem, describe the process to choose the optimal data structure.
+A: Identify operations needed, analyze frequency, consider time/space trade-offs, choose minimizing bottleneck
+
+Q: Design a data structure supporting efficient insert, delete, search, and find median operations.
+A: Use sorted array with binary search, or two heaps maintaining balance, or self-balancing BST
+
+Q: Create a problem where combination of data structures provides better solution than single structure.
+A: Graph with weighted edges needing shortest path queries: combine adjacency list with priority queue and hash map

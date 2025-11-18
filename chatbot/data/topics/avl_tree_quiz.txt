@@ -1,0 +1,50 @@
+[EASY]
+
+Q: What is an AVL tree?
+A: Self-balancing binary search tree where height difference of children is at most 1, balanced BST
+
+Q: What is a balance factor of a node?
+A: Height of left subtree minus height of right subtree, difference in heights
+
+Q: What is the valid range for a balance factor in an AVL tree?
+A: -1, 0, 1, between -1 and 1, -1 to 1
+
+Q: What is the time complexity of search in an AVL tree?
+A: O(log n), logarithmic, Ologn
+
+Q: When is rebalancing required in an AVL tree?
+A: After insertion or deletion when balance factor becomes -2 or 2, when imbalanced
+
+[MEDIUM]
+
+Q: Explain the right rotation operation in an AVL tree.
+A: Left child becomes new root, original root becomes right child, handle middle subtree transfer
+
+Q: What is the difference between left and right rotations?
+A: Left rotation moves node down to left, right child goes up; right rotation moves node down to right, left child goes up
+
+Q: Describe the algorithm for insertion in an AVL tree.
+A: Insert like BST, then traverse up updating balance factors, perform rotations when needed at each level
+
+Q: What rotation is required if balance factor is 2 and left child balance is 1?
+A: Right rotation, single rotation, right rotation only
+
+Q: After insertion causing imbalance, how do you determine which rotation to perform?
+A: Check balance factors of current and children nodes, different patterns require different rotations
+
+[HARD]
+
+Q: Describe the double right rotation (left-right rotation) when and why it's needed.
+A: When left child's right subtree is heavy, first left rotate on child, then right rotate on parent
+
+Q: Implement double left rotation (right-left rotation) and explain the scenario.
+A: When right child's left subtree is heavy, first right rotate on child, then left rotate on parent
+
+Q: What is the time complexity of deletion in an AVL tree?
+A: O(log n), logarithmic, Ologn
+
+Q: Given unbalanced tree, how would you convert it to AVL tree? What's the time complexity?
+A: Inorder traversal then rebuild or perform rebalancing operations, O(n) time complexity
+
+Q: Design an algorithm to detect all nodes requiring rotation during insertion and perform optimal rotations.
+A: During insertion, track nodes with balance factor 2 or -2, identify left-left, left-right, right-left, right-right cases

@@ -1,0 +1,40 @@
+Queue, Circular Queue, Deque
+
+Queue (FIFO):
+- First In First Out
+- Operations: enqueue (push at rear), dequeue (pop from front)
+- Implementations: linked list, circular buffer
+
+Circular Queue:
+- Uses fixed-size array treated circularly with head/tail pointers
+- Efficient use of space without shifting elements
+
+Deque (Double-ended queue):
+- Insert/remove at both ends
+- Implementations: std::deque in C++
+
+Example: Use queue for BFS traversal of graphs.
+
+Pseudocode: BFS using queue
+function bfs(start):
+    enqueue(start)
+    visited[start] = true
+    while queue not empty:
+        v = dequeue()
+        visit(v)
+        for neighbor in adj[v]:
+            if not visited[neighbor]:
+                visited[neighbor] = true
+                enqueue(neighbor)
+
+Type 'quiz queue' for a short quiz.
+
+Definition (short):
+A queue is a FIFO (first-in-first-out) linear data structure where elements are added at the rear and removed from the front.
+
+FAQ:
+Q: Queue vs Stack?
+A: Queue uses FIFO ordering (enqueue at rear, dequeue at front). Stack uses LIFO ordering (push/pop at top).
+
+Q: When to use a queue?
+A: Use queues for scheduling, breadth-first search (BFS), and situations where order of arrival must be preserved.

@@ -1,0 +1,50 @@
+[EASY]
+
+Q: What is a hash function?
+A: Function that maps data to fixed-size value, produces hash code, maps input to index
+
+Q: What is a hash collision?
+A: Two keys hash to same value, different inputs produce same output
+
+Q: What is the ideal time complexity for insertion in a hash table?
+A: O(1), constant time, O1, average case
+
+Q: What are the two main components of a hash table?
+A: Hash function and collision resolution method, function and strategy
+
+Q: Name two collision resolution techniques.
+A: Chaining and open addressing, separate chaining, linear probing
+
+[MEDIUM]
+
+Q: Explain separate chaining collision resolution.
+A: Store colliding elements in linked list at same index, resolve collisions with lists
+
+Q: Explain open addressing collision resolution.
+A: Find another empty slot in array using probing, linear probing or quadratic probing
+
+Q: What is the load factor in a hash table?
+A: Ratio of number of elements to table size, number of entries / table capacity
+
+Q: What is the time complexity of operations with separate chaining as load factor increases?
+A: Deteriorates to O(load_factor), O(n) in worst case, depends on collisions
+
+Q: Design a hash function for strings. What properties should it have?
+A: Distribute uniformly, deterministic, fast to compute, minimize collisions
+
+[HARD]
+
+Q: Implement rehashing when load factor exceeds threshold. What's the time complexity?
+A: Create new larger table, rehash all elements, O(n) time for rehashing operation
+
+Q: Design double hashing as collision resolution method. How does it improve over linear probing?
+A: Use second hash function for probing, reduces clustering, better distribution than linear probing
+
+Q: Analyze the probability of collisions using birthday paradox for hash functions.
+A: Collisions become likely when n grows, for perfect hash 0 collisions, probability increases quadratically
+
+Q: Implement a hash table with robin hood hashing. What advantage does it provide?
+A: Minimize worst-case probe length, steal from rich and give to poor, better performance distribution
+
+Q: Design a cuckoo hashing scheme with two hash functions. How does it handle collisions?
+A: Use two hash functions, if slot occupied kick out element to its alternate location, ensures O(1) lookup

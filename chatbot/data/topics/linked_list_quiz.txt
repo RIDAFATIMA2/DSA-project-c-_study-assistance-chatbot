@@ -1,0 +1,50 @@
+[EASY]
+
+Q: What is a linked list?
+A: A data structure with nodes containing data and pointers to the next node, linear data structure with links
+
+Q: What are the main components of a node in a linked list?
+A: Data and pointer, data and next pointer, value and reference
+
+Q: Which operation is most efficient in a singly linked list: insertion at the beginning or at the end?
+A: Insertion at the beginning, at the beginning, start of list
+
+Q: What is the time complexity of accessing the middle element in a linked list?
+A: O(n), linear time, On
+
+Q: In a linked list, how do you represent the end of the list?
+A: NULL pointer, None, nullptr, NULL
+
+[MEDIUM]
+
+Q: What is the time complexity of inserting an element after a given node in a linked list?
+A: O(1), constant time, O1
+
+Q: Explain how you would find the length of a linked list and its time complexity.
+A: Traverse from head to tail counting nodes, O(n) time complexity
+
+Q: What is the difference between a singly and doubly linked list in terms of traversal?
+A: Singly can only traverse forward, doubly can traverse both directions
+
+Q: How would you detect a cycle in a linked list? Name an algorithm.
+A: Floyd's cycle detection, tortoise and hare, slow and fast pointers
+
+Q: What is the space complexity of reversing a linked list using recursion?
+A: O(n), linear space, On
+
+[HARD]
+
+Q: Implement the logic to reverse a linked list in-place without using extra space. What is the time complexity?
+A: Traverse and reverse pointers as you go, three pointers technique, O(n) time O(1) space
+
+Q: Given two sorted linked lists, merge them into a single sorted linked list efficiently. What's the time complexity?
+A: O(n+m) time complexity, traverse both lists once, merge while comparing
+
+Q: Detect and remove a cycle in a linked list. Describe the algorithm.
+A: Find cycle using Floyd's algorithm, then find cycle start node, remove the edge causing cycle
+
+Q: Design an LRU Cache using a doubly linked list and hash map. Explain the operations.
+A: Hash map for O(1) access, doubly linked list for order, move accessed node to front, remove from back when full
+
+Q: Given a linked list, swap every two adjacent nodes and return the new head. What's the space complexity?
+A: O(1) space complexity, O(n) time, swap pointers iteratively

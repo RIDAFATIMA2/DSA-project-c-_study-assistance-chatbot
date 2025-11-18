@@ -1,0 +1,75 @@
+Tree 
+Definition: A tree is a non-linear hierarchical data structure consisting of nodes connected by edges, with one designated node as the root. It has no cycles and organizes data in parent-child relationships.
+
+Types:
+General Tree: A tree where a node can have any number of children.
+Binary Tree: Each node has at most two children.
+Binary Search Tree (BST): A binary tree with ordered structure (left < root < right).
+AVL Tree: A self-balancing BST where height difference (balance factor) is −1, 0, or +1.
+Red-Black Tree: A balanced BST with color properties ensuring logarithmic height.
+Trie (Prefix Tree): A tree for efficient string/prefix search.
+B-Tree / B+ Tree: Multi-way balanced trees used in databases and file systems.
+
+Key Properties:
+Root: Topmost node.
+Parent / Child: Relationship between nodes.
+Leaf: Node with no children.
+Height of Node: Longest path to a leaf.
+Height of Tree: Height of root.
+Depth: Distance from root to a node.
+Edge: Link between two nodes.
+
+Traversals (General Tree):
+DFS (Depth-First Search): Preorder, Postorder
+BFS (Breadth-First Search): Level-order traversal
+
+Pseudocode: DFS Preorder (General Tree)
+function preorder(node):
+    if node == null: return
+    visit(node)
+    for each child in node.children:
+        preorder(child)
+Pseudocode: DFS Postorder (General Tree)
+function postorder(node):
+    if node == null: return
+    for each child in node.children:
+        postorder(child)
+    visit(node)
+Pseudocode: BFS Level-Order
+function levelOrder(root):
+    if root == null: return
+    create queue q
+    enqueue root to q
+    while q is not empty:
+        node = dequeue q
+        visit(node)
+        for each child in node.children:
+            enqueue child to q
+
+Example:
+Tree structure:
+Root = A; children = B, C; B has child D
+
+Preorder: A B D C
+Postorder: D B C A
+Level-order: A B C D
+
+
+Applications:
+Modeling hierarchical data (filesystems, DOM trees).
+Searching (tries, BSTs).
+Databases and indexing (B-Trees, B+ Trees).
+Expression representation (expression trees).
+AI game trees (minimax).
+
+FAQ:
+
+Q: Is a tree a graph?
+A: Yes. A tree is a special acyclic connected graph.
+
+Q: What makes a structure a tree?
+A: No cycles, exactly one root, and a unique path between any two nodes.
+
+Q: What is the difference between a tree and a binary tree?
+A: A general tree allows any number of children per node; a binary tree allows at most two.
+

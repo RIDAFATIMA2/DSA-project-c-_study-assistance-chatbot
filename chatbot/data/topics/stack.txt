@@ -1,0 +1,26 @@
+Stack (LIFO)
+
+Definition:
+A stack is a linear data structure which follows Last-In-First-Out (LIFO). Elements are added/removed from the top.
+
+Operations:
+- push(x): insert x at top
+- pop(): remove top
+- top/peek(): access top element
+
+Pseudocode: Push/Pop
+function push(stack, x):
+    stack.push(x)
+function pop(stack):
+    if stack.empty(): return ERROR
+    return stack.pop()
+
+Example:
+Push sequence: push(1), push(2), push(3) => stack top is 3; pop() returns 3
+
+FAQ:
+Q: Stack vs Queue?
+A: Stack is LIFO (last-in-first-out); Queue is FIFO (first-in-first-out). Use stacks for DFS, recursion simulation, undo operations.
+
+Q: When to use a stack?
+A: Use a stack for expression evaluation, backtracking, implementing recursion iteratively, and DFS traversal.

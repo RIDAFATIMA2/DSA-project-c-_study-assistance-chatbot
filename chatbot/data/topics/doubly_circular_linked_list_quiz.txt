@@ -1,0 +1,50 @@
+[EASY]
+
+Q: What is a doubly linked list?
+A: Linked list where each node has pointers to next and previous nodes, bidirectional pointers
+
+Q: How is a circular linked list different from a regular linked list?
+A: Last node points back to first node instead of NULL, forms a circle, continuous structure
+
+Q: What are the main pointer components in a doubly circular linked list node?
+A: Data, next pointer, previous pointer, three components
+
+Q: What is the time complexity of insertion at the beginning in a doubly circular linked list?
+A: O(1), constant time, O1
+
+Q: How do you traverse a circular linked list without infinite loop?
+A: Use a stopping condition comparing with head node, track visited nodes
+
+[MEDIUM]
+
+Q: Explain how to insert a node in a doubly circular linked list.
+A: Create new node, adjust pointers to new node from previous and next, maintain circular property
+
+Q: How would you traverse a doubly circular linked list in reverse?
+A: Start from tail or use previous pointers, traverse backward until reaching start node
+
+Q: Describe the algorithm to delete a node from a doubly circular linked list.
+A: Adjust previous node's next, adjust next node's previous, maintain circular property
+
+Q: What is the advantage of circular linked list for certain applications?
+A: No need to check for NULL, suitable for round-robin scheduling, continuous data structures
+
+Q: How do you detect a cycle in a doubly circular linked list?
+A: Cycle always exists by design, instead detect if structure is valid, check pointer consistency
+
+[HARD]
+
+Q: Design and implement an LRU Cache using a doubly circular linked list and hash map.
+A: Hash map for O(1) access, doubly list for order, move accessed node to front, evict back node
+
+Q: Implement rotation of a doubly circular linked list by k positions. What's the complexity?
+A: Find new head at k positions, adjust pointers to rotate, O(k) time, O(1) space
+
+Q: Design an algorithm to split a circular doubly linked list into two circular lists.
+A: Find split point, break circular connections, create two separate circles
+
+Q: Reverse a doubly circular linked list in-place. What's the time and space complexity?
+A: Swap next and previous pointers for each node, O(n) time, O(1) space
+
+Q: Implement a multi-level doubly linked list iterator with level changing. Design the approach.
+A: Track current node and level, support traversal across levels and within levels, handle level transitions

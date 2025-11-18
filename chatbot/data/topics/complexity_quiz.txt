@@ -1,0 +1,51 @@
+[EASY]
+
+Q: What is Big-O notation used for?
+A: Describe time complexity, worst-case performance, upper bound of algorithm
+
+Q: What is the Big-O complexity of a simple for loop iterating n times?
+A: O(n), linear, On
+
+Q: What is the Big-O complexity of nested for loops each running n times?
+A: O(n^2), quadratic, O(n2)
+
+Q: Which is faster: O(n) or O(log n)?
+A: O(log n), logarithmic is faster, log n grows slower
+
+Q: What does O(1) represent?
+A: Constant time, doesn't depend on input size, same time regardless of n
+
+[MEDIUM]
+
+Q: Explain Big-Omega and Big-Theta notations.
+A: Big-Omega is lower bound, Big-Theta is tight bound, both lower and upper bounds
+
+Q: Calculate the Big-O complexity of a function with two sequential loops: first n times, second n^2 times.
+A: O(n^2), take dominant term, n + n^2 = O(n^2)
+
+Q: What is the difference between time complexity and space complexity?
+A: Time measures operations, space measures memory usage, both measured in Big-O
+
+Q: Derive the Big-O complexity of an algorithm that divides input by 2 each iteration.
+A: O(log n), logarithmic time, such as binary search
+
+Q: How do you analyze complexity for recursive algorithms?
+A: Use recurrence relation, apply master theorem, count recursive calls and work per call
+
+[HARD]
+
+Q: Explain amortized analysis and provide an example.
+A: Average cost per operation over sequence of operations, dynamic array resize costs O(1) amortized
+
+Q: Derive the time complexity of merge sort using the master theorem.
+A: T(n) = 2T(n/2) + O(n), apply master theorem, O(n log n)
+
+Q: What is the difference between average case and amortized complexity?
+A: Average case assumes random inputs, amortized is total cost across sequence of operations
+
+Q: Design an algorithm and calculate its complexity: build array of size n by appending elements.
+A: Naive O(n^2) with copying each time, O(n) amortized with doubling capacity
+
+Q: Given a complex algorithm with multiple operations, how would you calculate overall complexity?
+A: Identify dominant operations, sum complexities considering loops and recursion, simplify to Big-O
+

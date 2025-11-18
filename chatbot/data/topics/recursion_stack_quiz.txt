@@ -1,0 +1,50 @@
+[EASY]
+
+Q: What is recursion?
+A: Function that calls itself, self-calling function, solves problem by solving smaller subproblems
+
+Q: What are the two essential components of a recursive function?
+A: Base case and recursive case, stopping condition and recursive call
+
+Q: What happens to the call stack during recursive function calls?
+A: Each call adds new frame to stack, stack grows with each call, shrinks on return
+
+Q: What is a base case in recursion?
+A: Condition that terminates recursion, stops recursive calls, provides exit point
+
+Q: What error occurs if recursion doesn't have a base case?
+A: Stack overflow, infinite recursion, stack exhaustion
+
+[MEDIUM]
+
+Q: Explain the call stack management during recursive function execution.
+A: Each call creates new stack frame with local variables, parameters, return address
+
+Q: What is tail recursion and why is it important?
+A: Recursive call is last operation, compiler can optimize to iteration, reduces stack usage
+
+Q: How would you trace the execution of a recursive function like factorial(5)?
+A: Track each call and return value, show stack frames at each level
+
+Q: What is the space complexity of recursive factorial function?
+A: O(n), linear space, On, due to call stack depth
+
+Q: Design a recursive solution to find the maximum element in an array.
+A: Divide array in half, recursively find max in each half, return larger of two
+
+[HARD]
+
+Q: Implement memoization to optimize recursive Fibonacci. What's the improvement?
+A: Store computed results, avoid recalculating same subproblems, O(n) time from O(2^n)
+
+Q: Convert a recursive algorithm to iterative using an explicit stack. Discuss trade-offs.
+A: Manually manage stack operations, may reduce function call overhead, more complex code
+
+Q: Design a recursive algorithm with multiple recursive calls and analyze its time complexity.
+A: Tree recursion like Fibonacci or tree traversal, exponential worst case without optimization
+
+Q: How would you detect and prevent stack overflow in deeply recursive functions?
+A: Implement recursion depth limit, use tail recursion optimization, convert to iteration
+
+Q: Implement a recursive solution to the N-Queens problem with backtracking.
+A: Place queens column by column, recursively try each row, backtrack if conflict, verify no attacks

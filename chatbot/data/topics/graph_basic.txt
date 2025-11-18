@@ -1,0 +1,40 @@
+Definition:
+Graphs : A graph is a data structure consisting of a set of nodes (vertices) connected by links (edges) that represent relationships between pairs of nodes
+Representation:
+- Adjacency List: efficient for sparse graphs
+- Adjacency Matrix: O(1) edge check, O(V^2) space
+Traversals:
+- BFS (Breadth-First Search) uses queue, finds shortest path in unweighted graphs
+- DFS (Depth-First Search) uses stack/recursion
+
+Applications:
+- Network routing, social networks, dependency graphs
+
+Pseudocode: BFS and DFS 
+Pseudocode: BFS (short)
+function bfs(start):
+	enqueue(start)
+	visited[start] = true
+	while queue not empty:
+		v = dequeue()
+		visit(v)
+		for neighbor in adj[v]:
+			if not visited[neighbor]:
+				visited[neighbor] = true
+				enqueue(neighbor)
+Pseudocode: DFS (recursive)
+function dfs(v):
+	visited[v] = true
+	visit(v)
+	for neighbor in adj[v]:
+		if not visited[neighbor]: dfs(neighbor)
+
+
+FAQ:
+Q: When to use adjacency list vs matrix?
+A: Use adjacency lists for sparse graphs (less memory), adjacency matrices for dense graphs or when you need O(1) edge existence checks.
+
+Q: Which traversal gives shortest path in unweighted graph?
+A: BFS gives shortest path (in terms of number of edges) in unweighted graphs.
+
+Type 'quiz graph_basic' for a quiz.

@@ -1,0 +1,14 @@
+Q: What order does a queue follow?
+A: FIFO
+
+Q: Which traversal algorithm uses a queue?
+A: BFS
+
+Q: Is deque able to insert and remove at both ends? (yes/no)
+A: yes
+
+Q: In a circular queue using an array, what two indices are commonly tracked?
+A: head and tail
+
+Q: Is enqueue typically O(1)? (yes/no)
+A: yes

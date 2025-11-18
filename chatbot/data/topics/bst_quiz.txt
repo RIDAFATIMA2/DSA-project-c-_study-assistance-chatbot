@@ -1,0 +1,50 @@
+[EASY]
+
+Q: What is the defining property of a Binary Search Tree (BST)?
+A: Left subtree values are less than node, right subtree values are greater, ordered structure
+
+Q: What is the time complexity of searching for an element in a balanced BST?
+A: O(log n), logarithmic, Ologn
+
+Q: How do you insert a new element into a BST?
+A: Compare with current node, go left if smaller, go right if larger, insert at leaf position
+
+Q: What is the inorder traversal of a BST?
+A: Sorted order, ascending order, from smallest to largest
+
+Q: What is the minimum element in a BST always located at?
+A: Leftmost node, left subtree, keep going left
+
+[MEDIUM]
+
+Q: Describe the algorithm to delete a node with two children from a BST.
+A: Find inorder successor or predecessor, replace node with successor, delete successor from right subtree
+
+Q: What is the time complexity of deleting a node in a BST in the worst case?
+A: O(n), linear time, On, when tree is skewed
+
+Q: How would you validate that a binary tree is a valid BST?
+A: Track min/max bounds for each node, ensure left subtree max less than node, right subtree min greater than node
+
+Q: What is the difference between the inorder successor and inorder predecessor?
+A: Successor is next larger element, predecessor is next smaller element, adjacent in sorted order
+
+Q: How do you find the lowest common ancestor of two nodes in a BST?
+A: Compare target values with current node, go left if both smaller, go right if both larger, else current is LCA
+
+[HARD]
+
+Q: Design a self-balancing algorithm to convert a skewed BST into a balanced BST. What's the time complexity?
+A: Use AVL tree rotations or rebuild using inorder traversal, O(n) time complexity
+
+Q: Implement an algorithm to serialize and deserialize a BST while maintaining its properties.
+A: Serialize using preorder traversal, deserialize by building tree from preorder preserving BST property
+
+Q: Given a BST and a value k, find the k-th smallest element without using extra space.
+A: Reverse inorder traversal counting from left, maintain counter, O(k) time with optimized traversal
+
+Q: How would you implement a persistent BST where modifications don't affect original tree?
+A: Use path copying, create new nodes along path only, share unchanged subtrees
+
+Q: Design an algorithm to find the range of elements in a BST between two values [a, b].
+A: DFS with pruning, skip left if node less than a, skip right if node greater than b, collect in range

@@ -1,0 +1,50 @@
+[EASY]
+
+Q: What is an array?
+A: An array is a collection of elements of the same type stored in contiguous memory locations.
+
+Q: In an array, what is the time complexity to access an element by index?
+A: O(1), constant time
+
+Q: Which of these is a disadvantage of arrays? (a) Fixed size (b) O(1) access (c) Contiguous memory
+A: Fixed size, fixed-size
+
+Q: If an array is contiguous in memory, are elements stored next to each other? (yes/no)
+A: yes
+
+Q: Name a standard C++ container that wraps a dynamic array.
+A: vector
+
+[MEDIUM]
+
+Q: What is the worst-case time complexity to insert an element at the start of an array with n elements?
+A: O(n), On, linear time
+
+Q: In a sorted array, which search technique is more efficient than linear search?
+A: Binary search, binary-search
+
+Q: If you need to frequently insert and delete at the beginning of a collection, is an array a good choice? (yes/no)
+A: no
+
+Q: What is the space complexity of an array with n elements?
+A: O(n), On, linear space
+
+Q: Which search has O(log n) complexity but requires a sorted array?
+A: Binary search, binary-search, bsearch
+
+[HARD]
+
+Q: Explain the trade-off between array and linked list for insertion operations.
+A: Arrays have O(n) insertion due to element shifting; linked lists have O(1) insertion at known positions but O(n) search time to find position.
+
+Q: In a 2D array of dimensions m x n, what is the time complexity to access element at position [i][j]?
+A: O(1), constant time, O1
+
+Q: Consider an array stored in row-major order. Calculate the memory offset for element at [i][j] in an m×n array.
+A: i*n + j, offset is i*n+j, i*n+j formula
+
+Q: If you have an unsorted array and perform 1000 linear searches, what is the total time complexity?
+A: O(1000*n) or O(n), On, linear
+
+Q: How does dynamic array resizing (like in vector) affect amortized time complexity for insertion?
+A: Amortized O(1) insertion because resize operations happen rarely; most insertions are O(1) without resizing.

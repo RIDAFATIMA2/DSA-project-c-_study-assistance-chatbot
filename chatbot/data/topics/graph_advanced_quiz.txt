@@ -1,0 +1,50 @@
+[EASY]
+
+Q: What is the shortest path problem in graphs?
+A: Find path between vertices with minimum edge weight or count, optimal route
+
+Q: When can Dijkstra's algorithm be used?
+A: Graphs with non-negative edge weights, no negative edges allowed, positive weights
+
+Q: What is a Minimum Spanning Tree (MST)?
+A: Subset of edges connecting all vertices with minimum total weight, tree structure
+
+Q: Name two algorithms for finding MST.
+A: Kruskal's algorithm and Prim's algorithm, MST algorithms
+
+Q: What is the time complexity of Dijkstra's algorithm with a priority queue?
+A: O((V + E) log V), logarithmic per operation, OVElogV
+
+[MEDIUM]
+
+Q: Explain Dijkstra's algorithm for finding shortest paths.
+A: Maintain distances to all vertices, greedily select unvisited vertex with minimum distance, update neighbors
+
+Q: Describe Kruskal's algorithm for finding MST. What data structure is needed?
+A: Sort edges by weight, use union-find to add edges without forming cycle, O(E log E) time
+
+Q: Describe Prim's algorithm for finding MST.
+A: Start from vertex, grow tree by adding minimum weight edge to new vertex, O(V^2) or O(E log V)
+
+Q: What is the difference between Kruskal's and Prim's algorithms?
+A: Kruskal works with edges globally, Prim builds tree incrementally, Kruskal simpler for sparse graphs
+
+Q: How would you find shortest path in graphs with negative edge weights?
+A: Use Bellman-Ford algorithm, allows negative weights, O(VE) time complexity
+
+[HARD]
+
+Q: Implement Floyd-Warshall algorithm for all-pairs shortest paths. What's the time complexity?
+A: Dynamic programming with three nested loops, O(V^3) time, finds all pairs shortest paths
+
+Q: Design cycle detection in a directed graph with Bellman-Ford as byproduct.
+A: Bellman-Ford detects negative cycles, if distance improves after V-1 iterations then cycle exists
+
+Q: Implement Dijkstra's algorithm using different priority queue structures and compare.
+A: With binary heap O(E log V), Fibonacci heap O(E + V log V), trade-off between implementation complexity
+
+Q: Design a solution to find all minimum spanning trees in a weighted undirected graph.
+A: Use Kruskal's modified to find edges with equal weight at each step, count MST combinations
+
+Q: Analyze Johnson's algorithm for all-pairs shortest paths. When is it better than Floyd-Warshall?
+A: Reweight edges using Bellman-Ford, then run Dijkstra, O(VE + V^2 log V), better for sparse graphs

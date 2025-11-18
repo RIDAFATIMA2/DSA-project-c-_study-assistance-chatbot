@@ -1,0 +1,50 @@
+[EASY]
+
+Q: What is a binary heap?
+A: Complete binary tree where parent node is smaller/larger than children, min heap or max heap
+
+Q: What is the heap property?
+A: Parent is smaller than children in min heap, parent is larger in max heap, parents dominate children
+
+Q: How is a binary heap typically implemented?
+A: Using an array, array representation, sequential storage
+
+Q: What is the time complexity of inserting an element into a binary heap?
+A: O(log n), logarithmic, Ologn
+
+Q: Where is the root of a binary heap located in array representation?
+A: Index 0, first position, beginning of array
+
+[MEDIUM]
+
+Q: Explain the heapify operation in a binary heap.
+A: Rearrange heap to maintain heap property, bubble down or bubble up elements to correct positions
+
+Q: What is the time complexity of building a heap from an unsorted array?
+A: O(n), linear time, On
+
+Q: How do you extract the minimum element from a min heap?
+A: Return root element, replace with last element, heapify down from root
+
+Q: Describe the insertion process in a binary heap.
+A: Insert at last position in array, bubble up comparing with parent until heap property satisfied
+
+Q: What is the relationship between a parent at index i and its children in array representation?
+A: Left child at 2i+1, right child at 2i+2, parent at (i-1)/2
+
+[HARD]
+
+Q: Design an algorithm to merge two binary heaps efficiently. What's the time complexity?
+A: Create new array combining both, heapify the combined array, O(n+m) time
+
+Q: Implement heap sort using a binary heap. What's the time and space complexity?
+A: Build heap O(n), extract all elements n times O(log n) each, total O(n log n) time, O(n) space
+
+Q: Design a min-max heap where both minimum and maximum can be extracted in O(log n).
+A: Use alternating levels for min and max, maintain both properties during operations
+
+Q: How would you find the k largest elements in an unsorted array using a heap?
+A: Use min heap of size k, iterate through array, maintain k largest elements, O(n log k) time
+
+Q: Given a binary heap, design a decrease-key operation and analyze its complexity.
+A: Find element, decrease value, bubble up to maintain heap property, requires element position tracking, O(log n) time

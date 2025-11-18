@@ -1,0 +1,48 @@
+Advanced Sorting Techniques
+
+Merge Sort:
+- Divide and conquer: split array, sort halves, merge
+- Time: O(n log n) worst/average, stable
+- Space: O(n) extra
+
+Quick Sort:
+- Pick pivot, partition, recursively sort partitions
+- Average O(n log n), worst O(n^2) if poor pivot, often in-place
+- Many practical implementations (randomized pivot, 3-way partitioning)
+
+Heap Sort:
+- Use binary heap; O(n log n), in-place, not stable
+
+When to use:
+- Merge sort for stability and guaranteed O(n log n)
+- Quick sort for in-place average-case performance
+
+
+FAQ:
+Q: Which advanced sort is stable?
+A: Merge sort is stable; quicksort and heap sort are not stable by default.
+
+Q: When prefer quicksort over merge sort?
+A: For in-place sorting with good average performance and lower constant factors; but avoid quicksort when worst-case guarantees are required.
+
+Pseudocode: Merge Sort (high-level)
+function mergeSort(arr, l, r):
+	if l >= r: return
+	m = (l + r) // 2
+	mergeSort(arr, l, m)
+	mergeSort(arr, m+1, r)
+	merge(arr, l, m, r)
+Pseudocode: Quick Sort (high-level)
+function quickSort(arr, l, r):
+	if l >= r: return
+	p = partition(arr, l, r)
+	quickSort(arr, l, p-1)
+	quickSort(arr, p+1, r)
+
+Example:
+arr = [3,6,8,10,1,2,1]
+quick sort will arrange elements using partitioning; exact order depends on pivot choices.
+
+Tip: Use randomized pivot to avoid worst-case on already sorted input.
+
+Type 'quiz sorting_advanced' for questions.

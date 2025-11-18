@@ -1,0 +1,43 @@
+Definition:
+A Binary Search Tree (BST) is a node-based binary tree data structure which has the following properties:
+- The left subtree of a node contains only nodes with keys less than the node's key.
+- The right subtree only nodes with keys greater than the node's key.
+- Both left and right subtrees must also be BSTs.
+
+
+Pseudocode (search):
+function search(node, key):
+    if node is null: return false
+    if key == node.key: return true
+    if key < node.key: return search(node.left, key)
+    else: return search(node.right, key)
+Pseudocode: Insert into BST (recursive)
+function insert(node, key):
+    if node is null: return new Node(key)
+    if key < node.key: node.left = insert(node.left, key)
+    else: node.right = insert(node.right, key)
+    return node
+Pseudocode: Inorder traversal (gives sorted order)
+function inorder(node):
+    if node is null: return
+    inorder(node.left)
+    visit(node)
+    inorder(node.right)
+
+Example:
+Insert: 50, 30, 70, 20, 40, 60, 80
+Inorder traversal => 20 30 40 50 60 70 80 (sorted order)
+
+Tips:
+- Average time complexities: search/insert/delete -> O(log n) if tree is balanced.
+- Degenerates to O(n) if tree becomes a linked list (unbalanced).
+
+
+FAQ:
+Q: How is a Binary Search Tree different from a Binary Tree?
+A: A BST enforces ordering: left subtree keys < node key < right subtree keys. A binary tree has no ordering guarantee.
+
+Q: When is a BST inefficient?
+A: When it becomes unbalanced (e.g., inserting sorted data into a naive BST), operations degrade to O(n). Use self-balancing trees (AVL, Red-Black) for O(log n) guarantees.
+
+Want a quiz? Type 'quiz bst'.

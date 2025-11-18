@@ -1,0 +1,47 @@
+Introduction to DSA
+
+Definition:
+Data Structures and Algorithms (DSA) is the study of how data can be stored, organized, and processed efficiently. DSA focuses on:
+- Abstract Data Types (ADTs)
+- Choosing the right data structure for storage and operations
+- Designing algorithms with good time and space complexity
+
+Why DSA matters
+- Performance: Time and space efficiency matters for large inputs.
+- Scalability: Good algorithms scale to larger data.
+- Problem solving: DSA helps design systematic solutions and reason about correctness.
+
+Core concepts
+- Time complexity (Big-O): measure of steps as a function of input size n.
+- Space complexity: additional memory used.
+- Trade-offs: e.g., using more memory to get faster access.
+
+Basic roadmap
+1. Learn primitive structures (arrays, linked lists)
+2. Understand abstract structures (stacks, queues, trees, graphs, heaps, hash tables)
+3. Sorting and searching algorithms
+4. Advanced trees (AVL, red-black), graphs (shortest paths, MST)
+5. Practice problem solving and complexity analysis
+
+Example: Linear vs Binary Search
+- Linear search checks each element until found: O(n)
+- Binary search requires sorted array: O(log n)
+
+Pseudocode: Binary Search
+function binarySearch(arr, low, high, key):
+    while low <= high:
+        mid = (low + high) // 2
+        if arr[mid] == key: return mid
+        if arr[mid] < key: low = mid + 1
+        else: high = mid - 1
+    return -1
+
+
+FAQ:
+Q: What should I study first in DSA?
+A: Start with arrays and linked lists, then stacks/queues, then basic trees and graphs, and sorting/searching algorithms.
+
+Q: How to measure algorithm efficiency?
+A: Use time complexity (Big-O) and space complexity; analyze best/average/worst cases when relevant.
+
+Want a quiz? Type 'quiz intro'.

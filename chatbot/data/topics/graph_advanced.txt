@@ -1,0 +1,43 @@
+Graph Algorithms — Shortest Paths, MST, Topological Sort
+
+Shortest Paths:
+- Dijkstra's algorithm: weighted graphs with non-negative weights, uses priority queue (heap)
+- Bellman-Ford: handles negative weights, O(VE)
+
+Minimum Spanning Tree (MST):
+- Kruskal's algorithm: sort edges, union-find, O(E log E)
+- Prim's algorithm: grow tree using priority queue, O(E log V)
+
+Topological Sort:
+- Order vertices of a DAG such that for every directed edge u->v, u comes before v
+- Can be implemented via DFS or Kahn's algorithm (queue)
+
+FAQ:
+Q: When to use Dijkstra vs Bellman-Ford?
+A: Use Dijkstra for non-negative edge weights (faster); use Bellman-Ford when negative edges may exist or to detect negative cycles.
+
+Q: What is Kahn's algorithm?
+A: Kahn's algorithm performs topological sort using in-degree counts and a queue of zero in-degree vertices.
+
+Pseudocode: Dijkstra (high-level)
+function dijkstra(src):
+	dist[] = INF; dist[src] = 0
+	pq.push({0, src})
+	while pq not empty:
+		(d, u) = pq.pop()
+		if d > dist[u]: continue
+		for (v, w) in adj[u]:
+			if dist[v] > dist[u] + w:
+				dist[v] = dist[u] + w
+				pq.push({dist[v], v})
+Pseudocode: Kahn's algorithm (topological sort)
+function kahn():
+	compute indegree for all v
+	enqueue all v with indegree 0
+	while queue not empty:
+		v = dequeue(); output(v)
+		for neighbor in adj[v]:
+			indegree[neighbor]--
+			if indegree[neighbor] == 0: enqueue(neighbor)
+
+Type 'quiz graph_advanced' for a quiz.

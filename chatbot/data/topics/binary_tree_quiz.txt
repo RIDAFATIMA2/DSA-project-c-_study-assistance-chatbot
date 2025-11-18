@@ -1,0 +1,50 @@
+[EASY]
+
+Q: What is a binary tree?
+A: A tree where each node has at most two children, left and right child
+
+Q: Name the three main tree traversal methods.
+A: Inorder, preorder, postorder, DFS traversals
+
+Q: What is the difference between a complete and a full binary tree?
+A: Full tree has 0 or 2 children for each node, complete tree is filled left to right
+
+Q: What is the height of a tree with only one node (the root)?
+A: 0, zero, 1
+
+Q: In a preorder traversal, when do you visit a node?
+A: Before visiting its children, first, root first
+
+[MEDIUM]
+
+Q: What is the time complexity of inserting a node in a binary search tree on average?
+A: O(log n), logarithmic, Ologn
+
+Q: Explain level-order traversal (BFS) of a binary tree.
+A: Visit nodes level by level from top to bottom using a queue, breadth-first search
+
+Q: How would you find the lowest common ancestor (LCA) of two nodes in a binary tree?
+A: Recursively search left and right subtrees, if both found in different subtrees return current node
+
+Q: What is the maximum number of nodes in a binary tree of height h?
+A: 2^(h+1) - 1, two to power h+1 minus 1
+
+Q: How do you check if a binary tree is balanced?
+A: Calculate height of left and right subtrees recursively, difference should be at most 1 at each node
+
+[HARD]
+
+Q: Serialize and deserialize a binary tree to a string. How would you approach this?
+A: Use preorder traversal with markers for null nodes, deserialize by reconstructing from preorder traversal
+
+Q: Implement an algorithm to find if a binary tree contains a path sum equal to a target value.
+A: DFS from each node, track sum recursively, return true if sum equals target at any leaf
+
+Q: Given a binary tree, flatten it to a linked list in-place using preorder traversal.
+A: Modify tree pointers so right child becomes flattened tree, left child becomes null
+
+Q: What is the time complexity of building a balanced binary search tree from a sorted array?
+A: O(n), linear time, On
+
+Q: Design an iterator for a binary search tree. Support next() and hasNext() in O(1) amortized time.
+A: Use a stack to maintain path to next node, push all left children during initialization

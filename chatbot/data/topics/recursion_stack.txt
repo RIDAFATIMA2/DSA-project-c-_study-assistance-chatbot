@@ -1,0 +1,39 @@
+Recursion and Stack
+
+Recursion:
+- A function that calls itself.
+- Each recursive call uses stack frames to store local variables and return address.
+
+Key ideas:
+- Base case and recursive case
+- Convert recursion to iteration using an explicit stack when needed
+- Beware of stack overflow for deep recursion
+
+Stack (ADT):
+- LIFO (Last In First Out)
+- Operations: push (O(1)), pop (O(1)), top (O(1))
+- Implementations: array-based, linked-list based
+
+Example: Factorial (recursion)
+function fact(n):
+    if n <= 1: return 1
+    return n * fact(n-1)
+
+Pseudocode: DFS using stack
+function dfs(start):
+    stack.push(start)
+    while not stack.empty():
+        v = stack.pop()
+        if not visited[v]:
+            visit(v)
+            for each neighbor in reversed(adj[v]):
+                stack.push(neighbor)
+
+Want a quiz? Type 'quiz recursion_stack'.
+
+FAQ:
+Q: When to convert recursion to iteration?
+A: Convert when recursion depth may cause stack overflow or when you need explicit control over the call order; use an explicit stack to simulate recursion.
+
+Q: What is stack overflow?
+A: Stack overflow happens when the call stack grows beyond available memory (deep recursion without proper base case).

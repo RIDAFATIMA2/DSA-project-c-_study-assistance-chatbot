@@ -1,0 +1,51 @@
+[EASY]
+
+Q: What does LIFO stand for?
+A: Last In First Out
+
+Q: A stack follows which principle? (a) LIFO (b) FIFO (c) Random
+A: LIFO, Last In First Out
+
+Q: What are the main operations of a stack?
+A: Push and pop, push pop peek, push pop
+
+Q: When you push an element onto a stack, where does it go?
+A: Top of the stack, at the top
+
+Q: If you pop from an empty stack, what happens?
+A: Stack underflow error, underflow, error
+
+[MEDIUM]
+
+Q: What is the time complexity of push and pop operations in a stack implemented with a linked list?
+A: O(1), constant time, O1
+
+Q: Explain how you could use a stack to check if parentheses in an expression are balanced.
+A: Push opening bracket, pop for closing bracket, if matches continue, else unbalanced, at end check if stack empty.
+
+Q: How is a stack typically implemented using an array?
+A: Use an array and a top pointer that tracks the index of the topmost element.
+
+Q: In expression evaluation, what is the purpose of the operator stack in the shunting-yard algorithm?
+A: To convert infix expressions to postfix, to handle operator precedence and associativity
+
+Q: Can you implement a stack using a queue? If yes, describe the approach.
+A: Yes, use two queues; push uses one queue, pop dequeues all but last from first queue to second and back.
+
+[HARD]
+
+Q: Design a stack that supports push, pop, and findMin (return minimum element) all in O(1) time.
+A: Use two stacks: one for elements and one to track minimums at each level, or use pairs of (value, min_so_far).
+
+Q: Given a stack of plates where each plate has capacity c, design a data structure to push and pop elements.
+A: Use a vector of stacks; push to current stack, create new when full; pop from current and remove empty stacks.
+
+Q: Implement pseudocode for the Tower of Hanoi problem using recursion and without stacks explicitly.
+A: hanoi(n, source, target, auxiliary): if n==1 move source to target; else hanoi(n-1,source,auxiliary,target); move source to target; hanoi(n-1,auxiliary,target,source)
+
+Q: What is the space complexity of the call stack when computing factorial recursively for n?
+A: O(n), linear space, On
+
+Q: How would you implement undo/redo functionality using stacks? Describe the data structure.
+A: Use two stacks: undo stack stores previous states, redo stack stores undone states, push current to undo then change, pop from undo to redo.
+

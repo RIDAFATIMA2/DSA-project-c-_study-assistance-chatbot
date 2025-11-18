@@ -1,0 +1,50 @@
+[EASY]
+
+Q: What is the time complexity of Bubble Sort?
+A: O(n^2), quadratic, O(n2)
+
+Q: What is the time complexity of Insertion Sort?
+A: O(n^2), quadratic, O(n2)
+
+Q: What is the time complexity of Selection Sort?
+A: O(n^2), quadratic, O(n2)
+
+Q: Which elementary sorting algorithm is stable?
+A: Bubble sort, insertion sort, counting sort
+
+Q: What is the space complexity of Selection Sort?
+A: O(1), constant space, O1, in-place
+
+[MEDIUM]
+
+Q: Write pseudocode for Bubble Sort algorithm.
+A: for i=0 to n-1: for j=0 to n-i-2: if arr[j] > arr[j+1]: swap, compare and swap adjacent elements
+
+Q: Explain when Bubble Sort performs best and what is the time complexity.
+A: Already sorted array, best case O(n), with early termination flag
+
+Q: Describe the Insertion Sort algorithm and its strategy.
+A: Build sorted array from left, insert each element into correct position in sorted portion
+
+Q: What is the advantage of Insertion Sort for nearly sorted data?
+A: Best case O(n) complexity, fewer iterations needed, adaptive algorithm
+
+Q: Compare Bubble Sort and Selection Sort in terms of number of swaps.
+A: Bubble sort may swap multiple times, selection sort minimum swaps needed, selection sort more efficient
+
+[HARD]
+
+Q: Optimize Bubble Sort with early termination. What improvement does this provide?
+A: Add flag to detect if no swaps occur, improves best case to O(n), remains O(n^2) worst case
+
+Q: Design a hybrid approach combining multiple elementary sorts for different array sizes.
+A: Use insertion sort for small subarrays, bubble sort for larger, switch based on size threshold
+
+Q: Analyze the number of inversions in a list and how Bubble Sort relates to it.
+A: Each swap removes one inversion, number of swaps equals number of inversions in array
+
+Q: Implement Insertion Sort for linked lists and discuss advantages over array-based sort.
+A: No need to shift elements, O(n^2) time but better constants, no random access needed
+
+Q: Design a cache-efficient sorting algorithm combining elementary sorts. How would you optimize?
+A: Use insertion sort for small blocks fitting in cache, minimize memory access patterns, improve cache hits
